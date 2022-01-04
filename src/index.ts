@@ -2,13 +2,20 @@ interface Todo {
   title: string;
   description: string;
   completed: boolean;
-  age: number;
+  createdAt: number;
 }
 
-type TodoPreview = Pick<Todo, "title" | "completed" | "age">;
+type TodoPreviewPick = Pick<Todo, "title" | "completed">;
 
-const todo: TodoPreview = {
+const todoPick: TodoPreviewPick = {
   title: "Clean room",
   completed: false,
-  age: 10,
+};
+
+type TodoPreviewOmit = Omit<Todo, "description">;
+
+const todoOmit: TodoPreviewOmit = {
+  title: "Clean room",
+  completed: false,
+  createdAt: 1615544252770,
 };
