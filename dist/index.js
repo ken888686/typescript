@@ -1,41 +1,26 @@
 "use strict";
-let myStr = "Aaron";
-console.log(myStr);
-let num = 123;
-let isBoolean = true;
-let n = null;
-let u = undefined;
-// 容易混淆的類型
-let test;
-test = 1;
-test = "A";
-test = false;
-test = undefined;
-let arr = ["a", "b"];
-let arr2 = [
-    ["a", "b"],
-    ["1", "2"],
-];
-let tuple = ["a", 1, false];
-let tuple2 = [
-    ["a", 1],
-    ["1", 2],
-];
-var LiveStatus;
-(function (LiveStatus) {
-    LiveStatus[LiveStatus["SUCCESS"] = 0] = "SUCCESS";
-    LiveStatus[LiveStatus["FAIL"] = -1] = "FAIL";
-    LiveStatus[LiveStatus["STREAMING"] = 1] = "STREAMING";
-})(LiveStatus || (LiveStatus = {}));
-const streamStatus = LiveStatus.SUCCESS;
-let aaa = "a";
-aaa = 1;
-aaa = "s";
-aaa = false;
-let a1 = "a";
-a1 = 1;
-const obj = {
-    name: "a",
-    age: 1,
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
 };
-//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi9zcmMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IjtBQUFBLElBQUksS0FBSyxHQUFXLE9BQU8sQ0FBQztBQUM1QixPQUFPLENBQUMsR0FBRyxDQUFDLEtBQUssQ0FBQyxDQUFDO0FBRW5CLElBQUksR0FBRyxHQUFXLEdBQUcsQ0FBQztBQUN0QixJQUFJLFNBQVMsR0FBWSxJQUFJLENBQUM7QUFDOUIsSUFBSSxDQUFDLEdBQVMsSUFBSSxDQUFDO0FBQ25CLElBQUksQ0FBQyxHQUFjLFNBQVMsQ0FBQztBQUU3QixVQUFVO0FBQ1YsSUFBSSxJQUFTLENBQUM7QUFDZCxJQUFJLEdBQUcsQ0FBQyxDQUFDO0FBQ1QsSUFBSSxHQUFHLEdBQUcsQ0FBQztBQUNYLElBQUksR0FBRyxLQUFLLENBQUM7QUFDYixJQUFJLEdBQUcsU0FBUyxDQUFDO0FBRWpCLElBQUksR0FBRyxHQUFhLENBQUMsR0FBRyxFQUFFLEdBQUcsQ0FBQyxDQUFDO0FBQy9CLElBQUksSUFBSSxHQUFlO0lBQ3JCLENBQUMsR0FBRyxFQUFFLEdBQUcsQ0FBQztJQUNWLENBQUMsR0FBRyxFQUFFLEdBQUcsQ0FBQztDQUNYLENBQUM7QUFFRixJQUFJLEtBQUssR0FBOEIsQ0FBQyxHQUFHLEVBQUUsQ0FBQyxFQUFFLEtBQUssQ0FBQyxDQUFDO0FBQ3ZELElBQUksTUFBTSxHQUF1QjtJQUMvQixDQUFDLEdBQUcsRUFBRSxDQUFDLENBQUM7SUFDUixDQUFDLEdBQUcsRUFBRSxDQUFDLENBQUM7Q0FDVCxDQUFDO0FBRUYsSUFBSyxVQUlKO0FBSkQsV0FBSyxVQUFVO0lBQ2IsaURBQVcsQ0FBQTtJQUNYLDRDQUFTLENBQUE7SUFDVCxxREFBYSxDQUFBO0FBQ2YsQ0FBQyxFQUpJLFVBQVUsS0FBVixVQUFVLFFBSWQ7QUFDRCxNQUFNLFlBQVksR0FBZSxVQUFVLENBQUMsT0FBTyxDQUFDO0FBRXBELElBQUksR0FBRyxHQUE4QixHQUFHLENBQUM7QUFDekMsR0FBRyxHQUFHLENBQUMsQ0FBQztBQUNSLEdBQUcsR0FBRyxHQUFHLENBQUM7QUFDVixHQUFHLEdBQUcsS0FBSyxDQUFDO0FBR1osSUFBSSxFQUFFLEdBQU0sR0FBRyxDQUFDO0FBQ2hCLEVBQUUsR0FBRyxDQUFDLENBQUM7QUFRUCxNQUFNLEdBQUcsR0FBUztJQUNoQixJQUFJLEVBQUUsR0FBRztJQUNULEdBQUcsRUFBRSxDQUFDO0NBQ1AsQ0FBQyJ9
+function getData() {
+    return __awaiter(this, void 0, void 0, function* () {
+        const res = yield fetch("https://jsonplaceholder.typicode.com/todos/1");
+        const data = (yield res.json());
+        console.log(data);
+    });
+}
+getData();
+const data1 = {
+    userId: 1,
+    id: 1,
+    title: "delectus aut autem",
+    completed: false,
+};
+const beta = data1;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoiaW5kZXguanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyIuLi9zcmMvaW5kZXgudHMiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6Ijs7Ozs7Ozs7OztBQVlBLFNBQWUsT0FBTzs7UUFDcEIsTUFBTSxHQUFHLEdBQUcsTUFBTSxLQUFLLENBQUMsOENBQThDLENBQUMsQ0FBQztRQUN4RSxNQUFNLElBQUksR0FBRyxDQUFDLE1BQU0sR0FBRyxDQUFDLElBQUksRUFBRSxDQUFTLENBQUM7UUFDeEMsT0FBTyxDQUFDLEdBQUcsQ0FBQyxJQUFJLENBQUMsQ0FBQztJQUNwQixDQUFDO0NBQUE7QUFDRCxPQUFPLEVBQUUsQ0FBQztBQUVWLE1BQU0sS0FBSyxHQUFTO0lBQ2xCLE1BQU0sRUFBRSxDQUFDO0lBQ1QsRUFBRSxFQUFFLENBQUM7SUFDTCxLQUFLLEVBQUUsb0JBQW9CO0lBQzNCLFNBQVMsRUFBRSxLQUFLO0NBQ2pCLENBQUM7QUFLRixNQUFNLElBQUksR0FBRyxLQUF3QixDQUFDIn0=
