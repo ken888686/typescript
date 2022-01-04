@@ -31,3 +31,8 @@ enum LiveStatus {
   STREAMING = 1,
 }
 const streamStatus: LiveStatus = LiveStatus.SUCCESS;
+
+let aaa: number | string | boolean = "a";
+aaa = 1;
+aaa = "s";
+aaa = false;
