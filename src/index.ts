@@ -36,3 +36,8 @@ let aaa: number | string | boolean = "a";
 aaa = 1;
 aaa = "s";
 aaa = false;
+
+type A = number | string;
+let a1: A = "a";
+a1 = 1;
+// a1 = false;
