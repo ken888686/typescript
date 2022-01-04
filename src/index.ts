@@ -1,18 +1,31 @@
-function print<T>(data: T) {
-  console.log("data:", data);
+interface CatInfo {
+  age: number;
+  breed: string;
 }
 
-print<string>("Aaron");
-print<number>(10);
-print<boolean>(true);
+type CatName = "miffy" | "boris" | "mordred" | "aaron";
 
-class Print<T> {
-  data: T;
-  constructor(data: T) {
-    this.data = data;
-  }
-}
-const p1 = new Print<number>(10);
-console.log("p1:", p1);
-const p2 = new Print<string>("Aaron");
-console.log("p2:", p2);
+const cats: Record<CatName, CatInfo> = {
+  miffy: {
+    age: 10,
+    breed: "Persian",
+  },
+  boris: {
+    age: 5,
+    breed: "Maine Coon",
+  },
+  mordred: {
+    age: 16,
+    breed: "British Shorthair",
+  },
+  aaron: {
+    age: 16,
+    breed: "British Shorthair",
+  },
+};
+console.log(cats);
+
+const obj1: Record<string, boolean> = {
+  name: true,
+  age: false,
+};
