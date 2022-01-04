@@ -24,3 +24,10 @@ let tuple2: [string, number][] = [
   ["a", 1],
   ["1", 2],
 ];
+
+enum LiveStatus {
+  SUCCESS = 0,
+  FAIL = -1,
+  STREAMING = 1,
+}
+const streamStatus: LiveStatus = LiveStatus.SUCCESS;
