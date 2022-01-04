@@ -41,3 +41,28 @@ type A = number | string;
 let a1: A = "a";
 a1 = 1;
 // a1 = false;
+
+interface User {
+  name: string;
+  age: number;
+}
+
+type Card = {
+  name: string;
+  desc: string;
+};
+
+interface Card2 {
+  name: string;
+  desc: string;
+}
+
+interface Card2 {
+  age?: number;
+}
+
+const obj: Card2 = {
+  name: "a",
+  desc: "...",
+  age: 1,
+};
